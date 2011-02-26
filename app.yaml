@@ -1,0 +1,31 @@
+application: feed-ticker
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /
+  script: home.py
+
+- url: /index\.html
+  script: home.py
+
+- url: /css
+  static_dir: css
+  
+- url: /images
+  static_dir: images
+
+- url: /js
+  static_dir: js
+
+- url: /feed-ticker.zip
+  static_files: feed-ticker.zip
+  upload: feed-ticker.zip
+  
+- url: /home.py.txt
+  static_files: home.py.txt  
+  upload: home.py.txt
+
+- url: /.*
+  script: home.py

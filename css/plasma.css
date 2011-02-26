@@ -1,0 +1,85 @@
+/*
+Areas of difference
+
+Colour 1: Blue
+Colour 2: Orange
+
+*/
+
+.colour1, .colour2 {
+}
+
+.colour1 .headline{
+background: #3B7CFC url(../images/colour-option-blue-head.jpg) bottom right no-repeat;
+border: 1px solid #3B7CFC;
+}
+
+.colour1 .h-date, .colour1 .detail{
+color: #2D58B4;
+}
+
+.colour2 .headline{
+background: #D68127 url(../images/colour-option-orange-head.jpg) bottom right no-repeat;
+border: 1px solid #D68127;
+}
+
+.colour2 .h-date, .colour2 .detail{
+color: #F3A539;
+}
+
+
+.headline, .h-date, .detail {
+padding-left: 10px;
+}
+
+.headline, .h-date, .detail, .more-news {
+position: absolute;
+}
+
+body {
+overflow: hidden;
+margin-top: 0px;
+margin-left: 0px;
+height: 100%;
+width: 100%;
+}
+
+#ticker1{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    font-size: 40pt;
+    padding: 5px;
+    display: block; 
+    /* opacity: 0; */
+}
+
+.headline {
+height: 150px;
+line-height: 70px;
+top: 0;
+left: 0;
+right: 0;
+font-size: 95%;
+color: #fff;
+padding-right: 200px;
+}
+
+.detail {
+top: 200px;
+left: 10px;
+right: 10px;
+font-size: 90%;
+background-color: #fff;
+width: 95%;
+}
+
+.h-date {
+top: 160px;
+height: 100px;
+margin: 0;
+padding: 0;
+font-size: 20pt;}
