@@ -72,10 +72,17 @@ def parsefeed( url ) :
 
 def application(environ, start_response):
     parameters = parse_qs(environ.get('QUERY_STRING', ''))
+    
     if 'feed' in parameters:
         feedurl = escape(parameters['feed'][0])
     else:
-        feedurl = 'http://itn.co.uk/rss/index.rss'
+        
+#        feedurl = 'http://feedparser.org/docs/examples/atom10.xml'
+        feedurl = 'http://www.spiegel.de/schlagzeilen/index.rss'
+#        feedurl = 'http://news.ycombinator.com/rss'
+#        feedurl = 'http://blog.fefe.de/rss.xml'
+#        feedurl = 'http://itn.co.uk/rss/index.rss'
+
     status = '200 OK'
     output = parsefeed(feedurl)
     response_headers = [('Content-type', 'text/html')]
